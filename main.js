@@ -10,7 +10,11 @@ document.body.addEventListener("click", handleCloseCart);
 function handleCloseCart(event) {
   cart.style.width = 0;
 }
-const sliderImages = [];
+const leftIcon = document.querySelector("#slider .left__icon");
+const rightIcon = document.querySelector("#slider .right__icon");
+
+leftIcon.addEventListener("click",handleChangeImage);
+rightIcon.addEventListener("click",handleChangeImage);
 const images = [
   "./img/wk03_021722_site_ads_rewards_spring_seasonal_preview_story1_us_ca_en_v1_desktop_sign-in.webp",
   "./img/wk7_031322_size_1_desktop_nikeairmax_wear_more_air.webp",
