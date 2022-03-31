@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        
+      .cart__noti {
+        width: 200px;
+        height: fit-content;
+        border-left: 9px solid #06d6a0;
+        border-radius: 6px;
+        font-family: sans-serif;
+        box-shadow: 2px 2px 8px 0 #ccc;
+        position: fixed;
+        top: 50%;
+        right: 20px;
+        animation: noti 2000ms linear;
+      }
+      .title {
+        font-size: 18px;
+        padding: 3px 0 0 16px;
+      }
+      .status {
+        padding: 0 0 4px 24px;
+      }
+      @keyframes noti {
+        0%,
+        60% {
+          transform: translateX(0);
+        }
+        80% {
+          transform: translateX(120%);
+        }
+      }
+      .button{
+          background-color: #000;
+          display: inline-block;
+          color: #fff;
+          padding: 12px 24px;
+          border-radius: 6px;
+          cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cart__noti">
+      <h3 class="title">Add to Cart</h3>
+      <p class="status">Success</p>
+    </div>
+    <p class="button">
+        Add
+    </p>
+    <script>
+      const cartNoti = document.querySelector(".cart__noti");
+      const button = document.querySelector(".button");
+      button.addEventListener("click", function(){
+          button.style.backgroundColor = "red";
+      });
+    </script>
+  </body>
+</html>

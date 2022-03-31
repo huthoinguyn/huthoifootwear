@@ -17,7 +17,6 @@
   font-size: 18px;
   position: absolute;
   background-color: #ccc;
-  cursor: pointer;
 }
 #slider .left__icon {
   left: 16px;
@@ -248,4 +247,37 @@
   transform: scale(1.25);
 }
 
+.cart__noti {
+  width: 200px;
+  height: fit-content;
+  padding: 6px;
+  border-left: 9px solid #06d6a0;
+  border-radius: 6px;
+  background-color: #fff;
+  font-family: sans-serif;
+  box-shadow: 2px 2px 8px 0 #ccc;
+  position: fixed;
+  top: 30%;
+  right: 20px;
+  transform: translateX(120%);
+  animation: noti 2.5s 1 linear;
+}
+.cart__noti .title {
+  font-size: 18px;
+  padding: 3px 0 0 16px;
+  color: #d90429;
+}
+.cart__noti .status {
+  padding: 0 0 4px 24px;
+  color: #06d6a0;
+}
+@keyframes noti {
+  10%,
+  90% {
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(120%);
+  }
+}
 /*# sourceMappingURL=style.css.map */
