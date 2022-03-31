@@ -1,0 +1,68 @@
+#content {
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#content .container {
+  width: 60%;
+  background-color: #fff;
+  min-height: 500px;
+  margin: 0px auto;
+  position: sticky;
+  top: 50%;
+  transform: translateY(-35%);
+  border-radius: 9px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#content .container .form__img {
+  background-image: url("../img/hightops.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  width: 45%;
+}
+#content .container form {
+  width: 55%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#content .container form .title {
+  width: 100%;
+  font-size: 32px;
+  color: #000;
+  text-align: center;
+}
+#content .container form input {
+  width: 80%;
+  padding: 12px;
+  margin-top: 28px;
+}
+#content .container form .input__email,
+#content .container form .input__password {
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-radius: 16px;
+}
+#content .container form .input__submit {
+  width: 240px;
+  border-radius: 9px;
+  margin: 0 auto;
+  background-color: #000;
+  color: #ccc;
+  margin-top: 24px;
+  cursor: pointer;
+}
+#content .container form .forgot {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  margin-top: 16px;
+}
+
+/*# sourceMappingURL=login.css.map */
