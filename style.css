@@ -17,6 +17,7 @@
   font-size: 18px;
   position: absolute;
   background-color: #ccc;
+  cursor: pointer;
 }
 #slider .left__icon {
   left: 16px;
