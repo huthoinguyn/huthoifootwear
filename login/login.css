@@ -1,6 +1,31 @@
+#header .page a,
+#header .signup a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+#header .page {
+  transform: translateX(0);
+  transition: transform 400ms;
+  cursor: pointer;
+}
+#header .page:hover {
+  transform: translateX(-15%);
+}
+#header .signup {
+  transform: translateX(0);
+  transition: transform 400ms;
+  cursor: pointer;
+}
+#header .signup:hover {
+  transform: translateX(15%);
+}
+
 #content {
   min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
+  background: #020024;
+  background: linear-gradient(90deg, #020024 0%, #d90429 44%, #00d4ff 100%);
 }
 #content .container {
   width: 60%;

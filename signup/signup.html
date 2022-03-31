@@ -18,69 +18,59 @@
   <body>
     <div id="main">
       <div id="header">
-        <div class="header__logo">HuThoi <span>Footwear</span></div>
-        <ul class="nav">
-          <li class="nav__item">
-            <a href="../index.html">Trang chủ</a>
-          </li>
-          <li class="nav__item">
-            <a href="../statistical/statistical.html">Thống Kê Sản phẩm</a>
-          </li>
-          <li class="nav__item">
-            <a href="../login/login.html">Đăng nhập</a>
-          </li>
-          <li class="nav__item">
-            <a href="#">Đăng ký</a>
-          </li>
-        </ul>
+        <div id="header">
+          <h3 class="page">
+            <a href="../login/login.html">
+              <i class="fa-solid fa-angles-left"></i>
+              Đăng nhập
+            </a>
+          </h3>
+          <div class="header__logo">HuThoi <span>Footwear</span></div>
+          <!-- <ul class="nav"> 
+            <li class="nav__item">
+              <a href="../index.html">Trang chủ</a>
+            </li>
+            <li class="nav__item">
+              <a href="../statistical/statistical.html">Thống Kê Sản phẩm</a>
+            </li>
+            <li class="nav__item">
+              <a href="#">Đăng nhập</a>
+            </li>
+            <li class="nav__item">
+              <a href="../signup/signup.html">Đăng ký</a>
+            </li>
+          </ul> -->
+          <h3 class="signup">
+            <a href="../index.html">
+              Trang chủ
+              <i class="fa-solid fa-angles-right"></i>
+            </a>
+          </h3>
+        </div>
       </div>
       <div id="content">
-        <h3 class="title">Signup</h3>
-        <form>
-          <div class="form-group">
-            <label>Họ và tên:</label> <br />
-            <input type="text" class="form-control" />
-            <label for="">Email</label>
-            <input type="email" class="form-control" />
-            <label for="">Password</label>
-            <input type="password" class="form-control" />
-          </div>
-          <br />
-          <div class="form-group">
-            <label>Giới tính: </label>
-            <label><input name="gender" type="radio" checked /> Nam </label>
-            <label><input name="gender" type="radio" /> Nữ </label>
-          </div>
-          <br />
-          <div class="form-group">
-            <label>Quốc tịch:</label><br />
-            <select class="form-control">
-              <option selected>VietNam</option>
-              <option>United States</option>
-              <option>Korean</option>
-              <option>Japan</option>
-              <option>Indonesia</option>
-            </select>
-          </div>
-          <br />
-          <div class="form-group">
-            <label>Sở thích:</label><br />
-            <label><input type="checkbox" name="hob" />Âm nhạc</label>
-            <label><input type="checkbox" name="hob" checked />Du lịch</label>
-            <label><input type="checkbox" name="hob" />Thể thao</label>
-            <label><input type="checkbox" name="hob" />Nấu ăn</label>
-          </div>
-          <br />
-          <div class="form-group">
-            <label>Ghi chú:</label><br />
-            <textarea class="form-control" rows="5" cols="30"></textarea>
-          </div>
-          <hr />
-          <div class="form-group">
-            <button class="button">Đăng Ký</button>
-            <button class="button">Nhập lại</button>
-          </div>
-        </form>
+        <div class="container">
+          <div class="form__img"></div>
+          <form action="">
+            <h3 class="title">Signup</h3>
+            <input
+              type="email"
+              placeholder="Email"
+              name=""
+              id=""
+              class="input__email"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              name=""
+              id=""
+              class="input__password"
+            />
+            <input type="submit" class="input__submit" />
+            <a href="#" class="forgot">Forgot your password?</a>
+          </form>
+        </div>
       </div>
       <div id="footer">
         <div class="logo">
