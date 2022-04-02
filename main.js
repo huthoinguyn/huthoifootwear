@@ -53,7 +53,7 @@ function handleCloseCart(event) {
 }
 const shopping = document.querySelector("#cart .cart .shopping");
 shopping.addEventListener("click", handleCloseCart);
-// Add to cart
+// Cart Notification
 const cartNoti = `
 <div class="cart__noti">
       <h3 class="title">Add to Cart</h3>
@@ -61,7 +61,38 @@ const cartNoti = `
     </div>
 `;
 const addCarts = [...document.querySelectorAll("#content .product .addtocart")];
-addCarts.forEach((item) => item.addEventListener("click", handleAddtoCart));
+// addCarts.forEach((item) => item.addEventListener("click", handleAddtoCart));
 function handleAddtoCart(event) {
   document.body.insertAdjacentHTML("afterbegin", cartNoti);
+}
+// Add to Cart
+addCarts.forEach((item) =>
+  item.addEventListener("click", function (event) {
+    handleAddtoCart();
+    const product = event.target.parentNode;
+    const imageSrc = product.querySelector("img").src;
+    const productName = product.querySelector(".product .name").innerText;
+    const productPrice = product.querySelector(".product .price").innerText;
+    addProduct(imageSrc, productName, productPrice);
+  })
+);
+function addProduct(imageSrc, productName, productPrice) {
+  subCart.remove();
+  
+  const cartBody = cart.querySelector("table tbody");
+  const addTr = document.createElement("tr");
+  let addProductContent = `
+  <div class="item">
+              <div class="img" style="">
+              <img src="${imageSrc}" alt="">
+            </div>
+            <div class="info">
+              <p class="name">${productName}</p>
+              <p class="price">${productPrice}</p>
+            </div>
+            <i class="fa-solid fa-xmark delete__product"></i>
+            </div>
+  `;
+  addTr.innerHTML = addProductContent;
+  cartBody.append(addTr);
 }
