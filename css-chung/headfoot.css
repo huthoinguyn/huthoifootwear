@@ -57,13 +57,13 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* background-color: #fff; */
-  position: fixed;
+  background-color: #fff;
+  position: sticky;
   top: 0;
   right: 0;
   left: 0;
   z-index: 1000;
-  transition: all 400ms;
+  transition: min-height 400ms;
 }
 #header .header__logo {
   font-size: 32px;
@@ -72,11 +72,11 @@ body {
   cursor: pointer;
 }
 #header .header__logo span {
-  color: #333;
+  color: #ccc;
   font-size: 24px;
   text-transform: uppercase;
   font-style: italic;
-  font-weight: bold;
+  font-weight: normal;
 }
 #header .nav {
   display: flex;
@@ -90,9 +90,8 @@ body {
   text-decoration: underline;
 }
 #header .nav__item a {
-  color: #000;
+  color: #333;
   text-decoration: none;
-  font-size: 18px;
 }
 #header .search__cart {
   display: flex;
@@ -100,7 +99,7 @@ body {
   align-items: center;
 }
 #header .search__cart .search {
-  /* border-bottom: 1px solid #333; */
+  border: 1px solid #333;
   padding: 6px 9px;
   border-radius: 6px;
   color: #333;
@@ -113,7 +112,7 @@ body {
   font-size: 32px;
   cursor: pointer;
   margin: 0 16px;
-  transition: transform 400ms;
+  transition: transform 250ms;
 }
 #header .search__cart .cart__icon:hover {
   transform: scale(1.2);
@@ -216,12 +215,9 @@ body {
   right: 0;
   left: 0;
 }
-#header.sticky{
-  min-height: 70px;
-  background-color: #fff;
-  color: #333;
+
+#header.sticky {
+  min-height: 60px;
 }
-#header.sticky .search__cart .search{
-  border: 1px solid #ccc;
-}
+
 /*# sourceMappingURL=headfoot.css.map */

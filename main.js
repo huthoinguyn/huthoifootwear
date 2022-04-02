@@ -34,7 +34,7 @@ function handlePrevImage() {
   const randomImage = images[index];
   handleChangeImage(randomImage);
 }
-setInterval(handleNextImage, 3000);
+setInterval(handleNextImage, 6000);
 // Cart
 const cart = document.querySelector("#cart");
 const closeIcon = document.querySelector("#cart .close__icon");
@@ -47,12 +47,12 @@ cartIcon.addEventListener("click", function (event) {
 const subCart = document.querySelector("#cart .cart");
 document.body.addEventListener("click", handleCloseCart);
 function handleCloseCart(event) {
-  if(!event.target.contains(cart)){
+  if (!event.target.contains(cart)) {
     cart.style.width = 0;
   }
 }
 const shopping = document.querySelector("#cart .cart .shopping");
-shopping.addEventListener("click",handleCloseCart);
+shopping.addEventListener("click", handleCloseCart);
 // Add to cart
 const cartNoti = `
 <div class="cart__noti">
@@ -65,17 +65,3 @@ addCarts.forEach((item) => item.addEventListener("click", handleAddtoCart));
 function handleAddtoCart(event) {
   document.body.insertAdjacentHTML("afterbegin", cartNoti);
 }
-
-// Load
-// const loadTemplate = `
-
-
-// `;
-// window.addEventListener("load", function () {
-//   this.document.body.insertAdjacentHTML("afterbegin", loadTemplate);
-// });
-// window.addEventListener("loadeddata", function () {
-//   this.document.body.removeChild("#load");
-// });
-
-// -------

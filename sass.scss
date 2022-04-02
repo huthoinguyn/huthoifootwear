@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  .slider__icon{
+  .slider__icon {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -16,6 +16,7 @@
     font-size: 18px;
     position: absolute;
     background-color: #ccc;
+    cursor: pointer;
   }
   .left__icon {
     left: 16px;
@@ -90,27 +91,30 @@
       flex-direction: column;
       line-height: 2.4;
       color: #333;
-      &__title{
+      &__title {
         font-size: 28px;
       }
-      &__list{
+      &__list {
         list-style: none;
       }
-      &__item{
+      &__item {
         cursor: pointer;
       }
-      .sort-by,.gender,.category{
+      .sort-by,
+      .gender,
+      .category {
         width: 100%;
         min-height: 100px;
         border-bottom: 1px solid #ccc;
       }
-      .color,.size{
+      .color,
+      .size {
         width: 100%;
         border-bottom: 1px solid #ccc;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        i{
+        i {
           font-size: 32px;
           padding: 0 12px;
           color: #ccc;
@@ -130,87 +134,87 @@
         text-align: center;
         min-height: 320px;
         padding: 16px;
-        .name{
+        .name {
           margin-top: 24px;
         }
-        .addtocart{
+        .addtocart {
           padding: 9px 16px;
           background-color: #d90429;
           border-radius: 6px;
           color: #fff;
           font-size: 12px;
           cursor: pointer;
-          &:hover{
+          &:hover {
             opacity: 0.8;
           }
         }
-        &:first-child .product__img{
+        &:first-child .product__img {
           background-image: url("./img/shoe1.jpg");
           &:hover {
             background-image: url("./img/shoe1_1.jpg");
           }
         }
-        &:nth-child(2) .product__img{
+        &:nth-child(2) .product__img {
           background-image: url("./img/shoe2.jpg");
           &:hover {
             background-image: url("./img/shoe2_2.jpg");
           }
         }
-        &:nth-child(3) .product__img{
+        &:nth-child(3) .product__img {
           background-image: url("./img/shoe3.jpg");
           &:hover {
             background-image: url("./img/shoe3_3.jpg");
           }
         }
-        &:nth-child(4) .product__img{
+        &:nth-child(4) .product__img {
           background-image: url("./img/shoe4.jpg");
           &:hover {
             background-image: url("./img/shoe4_4.jpg");
           }
         }
-        &:nth-child(5) .product__img{
+        &:nth-child(5) .product__img {
           background-image: url("./img/shoe5.jpg");
           &:hover {
             background-image: url("./img/shoe5_5.jpg");
           }
         }
-        &:nth-child(6) .product__img{
+        &:nth-child(6) .product__img {
           background-image: url("./img/shoe6.jpg");
           &:hover {
             background-image: url("./img/shoe6_6.jpg");
           }
         }
-        &:nth-child(7) .product__img{
+        &:nth-child(7) .product__img {
           background-image: url("./img/shoe7.jpg");
           &:hover {
             background-image: url("./img/shoe7_7.jpg");
           }
         }
-        &:nth-child(8) .product__img{
+        &:nth-child(8) .product__img {
           background-image: url("./img/shoe8.jpg");
           &:hover {
             background-image: url("./img/shoe8_8.jpg");
           }
         }
-        &:nth-child(9) .product__img{
+        &:nth-child(9) .product__img {
           background-image: url("./img/shoe1.jpg");
           &:hover {
             background-image: url("./img/shoe1_1.jpg");
           }
         }
-        &:nth-child(10) .product__img{
+        &:nth-child(10) .product__img {
           background-image: url("./img/shoe3.jpg");
           &:hover {
             background-image: url("./img/shoe3_3.jpg");
           }
         }
-        &:nth-child(11) .product__img{
+        &:nth-child(11) .product__img {
           background-image: url("./img/shoe5.jpg");
           &:hover {
             background-image: url("./img/shoe5_5.jpg");
           }
         }
-        &:nth-child(12) .product__img{
+        &:nth-child(12) .product__img {
           background-image: url("./img/shoe2.jpg");
           &:hover {
             background-image: url("./img/shoe2_2.jpg");
@@ -231,7 +235,7 @@
     }
   }
 }
-#cart{
+#cart {
   background-color: #fff;
   width: 0;
   min-height: 100vh;
@@ -240,15 +244,93 @@
   right: 0;
   filter: drop-shadow(2px 4px 8px #000);
   z-index: 1000;
-  transition: width 800ms;
-  .close__icon{
+  transition: all 800ms;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .close__icon {
     color: #d90429;
     font-size: 28px;
     padding: 12px;
     cursor: pointer;
     transition: transform 200ms;
-    &:hover{
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    &:hover {
       transform: scale(1.25);
     }
+  }
+  .cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    flex-shrink: 0;
+    .title {
+      font-size: 24px;
+      color: #333f48;
+      margin-top: 12px;
+      display: inline-block;
+    }
+    .desc {
+      font-size: 14px;
+      color: #333f48;
+      display: inline-block;
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: 700;
+        font-size: 16px;
+      }
+    }
+    .shopping {
+      margin-top: 24px;
+      padding: 9px 36px;
+      background-color: #333f48;
+      color: #fff;
+      border-radius: 6px;
+      display: inline-block;
+      cursor: pointer;
+      transition: transform 200ms;
+      &:hover{
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+.cart__noti {
+  width: 200px;
+  height: fit-content;
+  padding: 6px;
+  border-left: 9px solid #06d6a0;
+  border-radius: 6px;
+  background-color: #fff;
+  font-family: sans-serif;
+  box-shadow: 2px 2px 8px 0 #ccc;
+  position: fixed;
+  top: 30%;
+  right: 20px;
+  transform: translateX(120%);
+  animation: noti 2.5s 1 linear;
+  .title {
+    font-size: 18px;
+    padding: 3px 0 0 16px;
+    color: #d90429;
+  }
+  .status {
+    padding: 0 0 4px 24px;
+    color: #06d6a0;
+  }
+}
+@keyframes noti {
+  10%,
+  90% {
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(120%);
   }
 }

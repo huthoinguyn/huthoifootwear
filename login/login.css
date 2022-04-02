@@ -89,5 +89,43 @@
   text-align: center;
   margin-top: 16px;
 }
+.login-noti {
+  width: fit-content;
+  min-height: 90px;
+  border-left: 6px solid #d90429;
+  border-radius: 4px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 12px 24px;
+  box-shadow: 2px 2px 8px #333;
+  position: fixed;
+  top: 30%;
+  right: 20px;
+  transform: translateX(120%);
+  animation: cartNoti 4s;
+}
 
+.login-noti .title {
+  color: #d90429;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.login-noti .desc{
+  text-align: center;
+}
+@keyframes cartNoti {
+  20%,
+  90%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(120%);
+  }
+}
+.login-noti.noti.active{
+
+}
 /*# sourceMappingURL=login.css.map */
