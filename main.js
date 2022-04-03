@@ -45,7 +45,7 @@ cartIcon.addEventListener("click", function (event) {
   event.stopPropagation();
 });
 const subCart = document.querySelector("#cart .cart");
-document.body.addEventListener("click", handleCloseCart);
+// document.body.addEventListener("click", handleCloseCart);
 function handleCloseCart(event) {
   if (!event.target.contains(cart)) {
     cart.style.width = 0;
@@ -66,32 +66,40 @@ function handleAddtoCart(event) {
   document.body.insertAdjacentHTML("afterbegin", cartNoti);
 }
 // Add to Cart
+let total = 0;
 addCarts.forEach((item) =>
   item.addEventListener("click", function (event) {
+    const payment = cart.querySelector(".pay");
+    payment.style.display = "flex";
     handleAddtoCart();
     const product = event.target.parentNode;
     const imageSrc = product.querySelector("img").src;
     const productName = product.querySelector(".product .name").innerText;
     const productPrice = product.querySelector(".product .price").innerText;
+    const price = productPrice.slice(1);
+    total += Number(price);
+    console.log("🚀 ~ file: main.js ~ line 80 ~ total", total)
     addProduct(imageSrc, productName, productPrice);
+    const cartTotal = document.querySelector("#cart .pay .total span");
+    cartTotal.innerText = total;
   })
 );
 function addProduct(imageSrc, productName, productPrice) {
   subCart.remove();
-  
+
   const cartBody = cart.querySelector("table tbody");
   const addTr = document.createElement("tr");
   let addProductContent = `
   <div class="item">
-              <div class="img" style="">
-              <img src="${imageSrc}" alt="">
-            </div>
-            <div class="info">
-              <p class="name">${productName}</p>
-              <p class="price">${productPrice}</p>
-            </div>
-            <i class="fa-solid fa-xmark delete__product"></i>
-            </div>
+  <div class="img" style="">
+  <img src="${imageSrc}" alt="">
+  </div>
+  <div class="info">
+  <p class="name">${productName}</p>
+  <p class="price">${productPrice}</p>
+  </div>
+  <i class="fa-solid fa-xmark delete__product"></i>
+  </div>
   `;
   addTr.innerHTML = addProductContent;
   cartBody.append(addTr);

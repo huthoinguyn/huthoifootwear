@@ -232,7 +232,7 @@
 #cart {
   background-color: #fff;
   width: 0;
-  min-height: 100vh;
+  max-height: 100vh;
   position: fixed;
   top: 0;
   right: 0;
@@ -244,18 +244,37 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow-y: scroll;
+  border-radius: 4px;
 }
-#cart .close__icon {
-  color: #d90429;
-  font-size: 28px;
+#cart .close__cart {
+  width: 100%;
   padding: 12px;
-  cursor: pointer;
-  transition: transform 200ms;
-  position: absolute;
-  top: 16px;
-  left: 16px;
+  z-index: 10000;
+  font-size: 28px;
+  position: sticky;
+  display: flex;
+  justify-content: flex-start;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
 }
-#cart .close__icon:hover {
+#cart .close__cart .title {
+  width: 100%;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-transform: capitalize;
+  color: #333f48;
+}
+#cart .close__cart .close__icon {
+  color: #d90429;
+  display: inline-block;
+  transition: transform 200ms;
+  cursor: pointer;
+}
+#cart .close__cart .close__icon:hover {
   transform: scale(1.25);
 }
 #cart .cart {
@@ -264,7 +283,7 @@
   justify-content: center;
   flex-direction: column;
   font-family: sans-serif;
-  flex-shrink: 0;
+  padding: 24px;
 }
 #cart .cart .title {
   font-size: 24px;
@@ -291,7 +310,7 @@
   border-radius: 6px;
   display: inline-block;
   cursor: pointer;
-  transition: tran;
+  transition: transform 300ms;
 }
 #cart .cart .shopping:hover {
   transform: scale(1.05);
@@ -321,6 +340,7 @@
   padding: 12px;
   cursor: pointer;
   transition: transform 200ms;
+  z-index: 1000;
   position: absolute;
   top: 30%;
   right: 6px;
@@ -343,6 +363,30 @@
   font-size: 16px;
   font-style: italic;
   text-align: center;
+}
+#cart .pay {
+  width: 100%;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  padding: 9px;
+  bottom: 0px;
+  right: 0;
+  left: 0;
+  z-index: 10000;
+  background-color: #fff;
+}
+#cart .pay .buy {
+  padding: 12px 36px;
+  border-radius: 9px;
+  background-color: #d90429;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 300ms;
+}
+#cart .pay .buy:hover {
+  transform: scale(1.05);
 }
 
 .cart__noti {
